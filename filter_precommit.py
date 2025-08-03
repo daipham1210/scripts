@@ -1,3 +1,11 @@
+"""
+HOW TO USE:
+1. Save the script at your folder ex: ~/working/filter_precommit.py
+2. Add this alias to your shell config:
+alias filter_precommit='SKIP=django-migrations git commit 2>&1 | tee ~/working/git_output.log; python ~/working/filter_precommit.py'
+3. Run filter_precommit when committing
+"""
+
 import subprocess
 import sys
 import re
